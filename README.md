@@ -4,7 +4,7 @@
 1. Clone the service
 2. Ensure you are running docker on your environment
 3. cd to the service directory using terminal
-4. Run docker-compose -f local.yml up --build
+4. Run docker-compose -f local.yml up --build (launches @ http://127.0.0.1:8099)
 5. N.B Super admin user account will be creates, credentails are uname: admin pword: brickmode
 6. Social Auth app will be setup (Github)
 

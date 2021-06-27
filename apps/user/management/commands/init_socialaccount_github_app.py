@@ -9,11 +9,18 @@ from django.conf import settings
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
+        # delete all sites if there are
+        for site in Site.objects.all():
+            site.delete()
+        # create ne site
         site, site_created = Site.objects.update_or_create(
             id=1,
             name = 'http://127.0.0.1:8099',
             domain = 'http://127.0.0.1:8099'
         )
+        for app in SocialApp.objects.all():
+            app.delete()
+        # create new app
         app, app_created = SocialApp.objects.update_or_create(
             id=1,
             provider = 'github',

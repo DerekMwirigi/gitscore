@@ -5,8 +5,7 @@ db.sqlite3
 
 ### Node ###
 # Logs
-logs
-npm-debug.log*
+# logs
 
 # Runtime data
 pids

@@ -13,7 +13,7 @@ class Command(BaseCommand):
         for site in Site.objects.all():
             site.delete()
         # create ne site
-        site, site_created = Site.objects.update_or_create(
+        site, site_created = Site.objects.create(
             id=1,
             name = 'http://127.0.0.1:8099',
             domain = 'http://127.0.0.1:8099'
@@ -21,7 +21,7 @@ class Command(BaseCommand):
         for app in SocialApp.objects.all():
             app.delete()
         # create new app
-        app, app_created = SocialApp.objects.update_or_create(
+        app, app_created = SocialApp.objects.create(
             id=1,
             provider = 'github',
             name = 'gitscore',

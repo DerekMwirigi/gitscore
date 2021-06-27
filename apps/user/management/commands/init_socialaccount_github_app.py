@@ -21,7 +21,7 @@ class Command(BaseCommand):
         for app in SocialApp.objects.all():
             app.delete()
         # create new app
-        app = SocialApp.objects.screate(
+        app = SocialApp.objects.create(
             id=1,
             provider = 'github',
             name = 'gitscore',

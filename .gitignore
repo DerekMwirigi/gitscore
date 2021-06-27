@@ -1,0 +1,24 @@
+### Django ###
+*.pyc
+db.sqlite3
+# media
+
+### Node ###
+# Logs
+logs
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage
+.coverage
+htmlcov
+
+# Static files
+static_files/
+static/

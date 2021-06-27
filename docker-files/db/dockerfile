@@ -1,0 +1,4 @@
+FROM library/postgres
+ENV POSTGRES_USER appuser
+ENV POSTGRES_PASSWORD r00t
+ENV POSTGRES_DB gitscore

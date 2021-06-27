@@ -5,6 +5,8 @@
 2. Ensure you are running docker on your environment
 3. cd to the service directory using terminal
 4. Run docker-compose -f local.yml up --build
+5. N.B Super admin user account will be creates, credentails are uname: admin pword: brickmode
+6. Social Auth app will be setup (Github)
 
 # run automatic tests
 1. Execute the web docker containter with bash with docker exec -it gitscore_web_1 bash

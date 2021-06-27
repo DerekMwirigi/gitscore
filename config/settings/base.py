@@ -271,3 +271,7 @@ LOGGING = {
 ADMINUSERS = [
     {'username': 'admin', 'password': 'bricksmode', 'email':'admin@mail.com'}
 ]
+
+# GITHUB SOCIAL AOUTH
+SOCIAL_OAUTH_GITHUB_CLIENT_ID = 'f0247e916ecf5ef232ae'
+SOCIAL_OAUTH_GITHUB_SCRET_KEY = 'c6e3d9afda464432bbb143f369e1b2966fa60208'

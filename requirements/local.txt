@@ -19,6 +19,8 @@ djangorestframework-simplejwt
 
 django-allauth
 
+markupsafe
+
 flake8-django
 
 coveralls

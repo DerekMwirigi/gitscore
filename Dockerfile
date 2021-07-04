@@ -16,7 +16,7 @@ RUN pip3 install -r /requirements/local.txt
 
 ADD . /code/
 
-COPY docker-files/web/run_web.sh /start-run_web.sh
+COPY run_web.sh /start-run_web.sh
 RUN sed -i 's/\r//' /start-run_web.sh
 RUN chmod +x /start-run_web.sh
 

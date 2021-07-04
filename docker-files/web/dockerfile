@@ -8,11 +8,8 @@ RUN apt-get install python3-pip -y
 
 RUN mkdir /code
 WORKDIR /code
-RUN mkdir /requirements
 
-COPY ./requirements /requirements
-
-RUN pip install -r /requirements/local.txt
+RUN pip install -r ./requirements/local.txt
 
 ADD . /code/
 

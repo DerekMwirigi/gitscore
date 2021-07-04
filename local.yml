@@ -7,7 +7,7 @@ services:
         image: &gitscore gitscore
         build:
             context: .
-            dockerfile: ./dockerfile
+            dockerfile: ./Dockerfile
         hostname: web
         command: /start-run_web.sh
         volumes:

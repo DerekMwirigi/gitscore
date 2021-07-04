@@ -1,8 +1,5 @@
 django>=2.2,<2.2.99
 
-psycopg2<2.8
-psycopg2-binary
-
 python-logstash==0.4.6
 
 python-decouple

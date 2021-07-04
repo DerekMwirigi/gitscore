@@ -9,9 +9,9 @@ RUN apt-get install python3-pip -y
 RUN mkdir /code
 WORKDIR /code
 
-COPY requirements /requirements
+COPY ./requirements /requirements
 
-RUN pip install -r /requirements/local.txt
+RUN pip3 install -r /requirements/local.txt
 
 ADD . /code/
 

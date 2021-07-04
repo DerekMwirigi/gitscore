@@ -19,7 +19,7 @@ djangorestframework-simplejwt
 
 django-allauth
 
-markupsafe
+MarkupSafe
 
 flake8-django
 

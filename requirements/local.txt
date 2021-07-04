@@ -21,3 +21,7 @@ djangorestframework==3.9
 djangorestframework-simplejwt
 
 django-allauth
+
+flake8-django
+
+coveralls

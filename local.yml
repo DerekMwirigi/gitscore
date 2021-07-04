@@ -2,20 +2,6 @@ version: '3.3'
 
 services:
 
-    # Postgres
-    db:
-        image: postgres:12
-        build:
-            context: .
-            dockerfile: ./docker-files/db/dockerfile
-        hostname: db
-        ports:
-            - "5499:5432"
-        environment:
-            POSTGRES_USER: "appuser"
-            POSTGRES_PASSWORD: "r00t"
-            POSTGRES_DB_NAME: "gitscore"
-
     # Django
     web:
         image: &gitscore gitscore
@@ -28,7 +14,3 @@ services:
             - .:/code:Z
         ports:
             - "8099:8000"
-        links:
-            - db
-        depends_on:
-            - db

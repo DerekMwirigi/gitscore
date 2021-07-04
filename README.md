@@ -1,4 +1,8 @@
 # gitscore
+
+[![Build Status](https://travis-ci.com/DerekMwirigi/gitscore.svg?branch=main)](https://travis-ci.com/DerekMwirigi/gitscore)
+
+
 # 1 Service description with all made assumptions
     Here is simple way to check github repositories score, We calculate popularity by score = (num_stars * 1 + num_forks * 2) <strong> >= 500
     1. Need to have a github account

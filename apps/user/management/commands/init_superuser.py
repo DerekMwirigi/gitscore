@@ -1,6 +1,10 @@
 from django.core.management.base import BaseCommand
 from django.conf import settings
 from apps.user.models import User
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 
 class Command(BaseCommand):
@@ -18,4 +22,4 @@ class Command(BaseCommand):
                 user.set_password(admin['password'])
                 user.save()
         else:
-            print('Admin accounts can only be initialized if no Accounts exist')
+            logger.info('Admin accounts can only be initialized if no Accounts exist')

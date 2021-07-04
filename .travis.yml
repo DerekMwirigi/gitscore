@@ -8,7 +8,7 @@ install:
 # To run tests
 script:
   - flake8
-  - coverage run --source=repocheck test
+  - coverage run manage.py test apps/repocheck/
 # send coverage report to coveralls
 after_success:
   coveralls

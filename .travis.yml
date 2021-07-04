@@ -10,6 +10,7 @@ env:
 services:
   - docker
 before_install:
+  - echo "#!codemylife#!2" | docker login -u "derekprince" --password-stdin
   - docker image build -t gitscore ${IMGNAME}
 # install requirements
 install:

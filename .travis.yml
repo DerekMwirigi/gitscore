@@ -6,7 +6,7 @@ python:
 arch:
   - arm64
 env:
-- IMGNAME=docker-files/web/ .
+- IMGNAME= .
 services:
   - docker
 before_install:

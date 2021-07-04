@@ -1,8 +1,10 @@
 from django.test import TestCase
 from apps.user.models import User
 
+
 from rest_framework.authtoken.models import Token
 from apps.user.tasks import create_user_token
+
 
 class TestAppTasks(TestCase):
     def test_create_user_token(self):

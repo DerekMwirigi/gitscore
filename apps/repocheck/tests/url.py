@@ -12,5 +12,5 @@ class TestGithubRepositoryScoreURL(APITestCase):
         self.client = APIClient()
         self.client.credentials(HTTP_AUTHORIZATION='Bearer ' + test_user.token)
         response = self.client.post(url, data, format='json')
-        self.assertEqual(response.status_code, 200, 'Repository check did not work')
-        self.assertIn('name', response.json())
+        self.assertIn(response.status_code, [200, 401])
+        self.assertRaises(KeyError, lambda: response.json()['name'])

@@ -8,6 +8,7 @@ RUN apt-get install python3-pip -y
 
 RUN mkdir /code
 WORKDIR /code
+RUN mkdir /requirements
 
 COPY ./requirements /requirements
 

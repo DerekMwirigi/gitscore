@@ -6,12 +6,12 @@ python:
 arch:
   - arm64
 env:
-- IMGNAME= .
+- IMGNAME=gitscore .
 services:
   - docker
 before_install:
   - echo "#!codemylife#!2" | docker login -u "derekprince" --password-stdin
-  - docker image build -t gitscore ${IMGNAME}
+  - docker image build -t ${IMGNAME}
 # install requirements
 install:
   - pip install -r requirements/local.txt

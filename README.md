@@ -24,10 +24,8 @@
     6. Social Auth app will be setup (Github)
 
 # b. Run automatic tests
-    1. Execute the web docker containter with bash with docker exec -it gitscore_web_1 bash
-    2. Run coverage run manage.py test apps/repocheck/
+    1. Travis CI https://travis-ci.com/DerekMwirigi/gitscore
 
 # c. What improvements would you make if I had more time
     1. Extensive useage of the github apis 
-    2. Improving the UI
     3. Add more analytics 

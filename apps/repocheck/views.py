@@ -30,11 +30,12 @@ class GithubRepositoryScoreAPIView(APIView):
     )
     def post(self, request, format=None):
         reponse = {'status': False, 'message': 'Failed', 'errors': [], 'data': []}
-        status_code = status.HTTP_200_OK
-        url = 'https://api.github.com/repos/{}/{}'.format(request.data['organisation'], request.data['repository'])
-        http_reponse = requests.get(url=url)
-        status_code = http_reponse.status_code
-        if status_code == 200:
-            repo_json_response = http_reponse.json()
-            reponse = {'status': True, 'message': 'Success', 'errors': [], 'data': evaluate_repository(repo_json_response)}
+        status_code = status.HTTP_500_INTERNAL_SERVER_ERROR
+        if 'organisation' in request.data and 'repository' in request.data:
+            url = 'https://api.github.com/repos/{}/{}'.format(request.data['organisation'], request.data['repository'])
+            http_reponse = requests.get(url=url)
+            status_code = http_reponse.status_code
+            if status_code == status.HTTP_200_OK:
+                repo_json_response = http_reponse.json()
+                reponse = {'status': True, 'message': 'Success', 'errors': [], 'data': evaluate_repository(repo_json_response)}
         return Response(reponse, status=status_code)
